@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Ignore csv files so they don't end up in github
+.csv 
+
 # C extensions
 *.so
 
