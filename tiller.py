@@ -1,5 +1,6 @@
 import csv
 from datetime import datetime, timedelta
+from decimal import Decimal
 import glob
 
 # Input
@@ -18,7 +19,8 @@ def get_files():
 def format_row(row, account):
     amount = row.get('debit')
     if not amount:
-        amount = row.get('credit') * -1
+        amount = Decimal(row.get('credit')) * -1
+    
 
     account_info = accounts.get(account)
 
